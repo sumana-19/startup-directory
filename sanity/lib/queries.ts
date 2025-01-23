@@ -89,7 +89,7 @@ export const PLAYLIST_BY_SLUG_QUERY =
     _createdAt,
     title,
     slug,
-    author->{
+    author->{ 
       _id,
       name,
       slug,

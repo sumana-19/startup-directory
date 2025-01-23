@@ -10,6 +10,8 @@ const View = async ({ id }: { id: string }) => {
     .withConfig({ useCdn: false })
     .fetch(STARTUP_VIEWS_QUERY, { id });
 
+  if (!totalViews) return null;
+
   after(
     async () =>
       await writeClient
